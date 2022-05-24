@@ -1,0 +1,207 @@
+/*
+  Bassel Haj Amor
+*/
+
+/* Fonts utile pour conserver la meme police */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto/Roboto-Bold.ttf');
+  font-weight: bold;
+}
+
+* {
+  top: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* Application de la police a toute la page */
+  font-family: Roboto, sans-serif;
+  /* revien a la ligne */
+  word-break: break-all;
+}
+
+/* Définie le fond pour le site */
+html{
+  background-color: #B19AB7;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* L'image sera réduite si nécessaire */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr{
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+footer{
+  text-align: center;
+  padding: 1.5%;
+  background-color: #604F82;
+  color: white;
+}
+
+.header-text{
+  padding: 2.5%;
+  text-align: center;
+  background-color: #48366C;
+  background-image: url("../assets/imgs/Cerisier.webp");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.header-text h1{
+  font-size: 50px;
+}
+
+.navbar{
+  list-style-type: none;
+  background: #333;
+  padding: 15px;
+}
+
+.navbar div a{
+  text-decoration: none;
+  padding: 14px 15px;
+  color: white;
+}
+
+.navbar div a:hover{
+  background-color: #322057;
+}
+
+.sideBox{
+  background-color: #8D6B96;
+  padding: 0.5%;
+}
+
+.sideBox h2{
+  padding: 1% 0;
+}
+
+.sideBox p, .main-containt p{
+  padding: 1% 0;
+}
+
+.main-containt{
+  background-color: #B19AB7;
+  padding: 0.5%;
+}
+
+
+/* Elements flex */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-30{
+  flex: 30;
+}
+
+.flex-70{
+  flex: 70;
+}
+
+.fluid-image{
+  width: 100%;
+}
+
+
+/* Elements de formulaire */
+.formulaire-contact{
+  padding: 1%;
+  color: white;
+}
+
+.bouton-envoyer{
+  background-color: #48366C;
+  color: white;
+}
+
+.bouton-envoyer:hover {
+  cursor: pointer;
+}
+
+.hr-form{
+  width: 99%;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  color: #322057;
+  margin: 5px 0px;
+}
+
+/* Media Queries for desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 700px) {
+  .navbar {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar div{
+    padding: 15px;
+    width: 100%;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .header-text{
+    padding: 23%;
+    background-size: cover;
+  }
+  footer{
+    padding: 10%;
+  }
+}

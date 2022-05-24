@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <!-- Titre h1 et sous titre + image de fond -->
+      <div class="header-text">
+        <h1>Contact</h1>
+        <p>Kitsune</p>
+      </div>
+      <!-- Effect :hover sur lien -->
+      <nav class="flex-container navbar">
+        <!-- Menu Flex -->
+        <div class=""> <a href="index.html">Home</a> </div>
+        <div class=""> <a href="contact.html">Contact</a> </div>
+      </nav>
+    </header>
+    <main>
+      <section class="formulaire-contact">
+        <form class="" action="" method="post">
+            <fieldset>
+              <legend><h1>Formulaire de contact</h1></legend>
+
+              <label for="prenom">Prenom</label>
+              <input type="text" name="prenom" value="" placeholder="Veuillez entrer votre prenom" required
+              oninvalid="this.setCustomValidity('Entrer votre prenom ici')"
+              oninput="this.setCustomValidity('')"/>
+              <label for="nom">Nom</label>
+              <input type="text" name="nom" value="" placeholder="Veuillez entrer votre nom" required
+              oninvalid="this.setCustomValidity('Entrer votre nom dutilisateur ici')"
+              oninput="this.setCustomValidity('')"/>
+              <label for="email">Email</label>
+              <input type="email" name="email" value="" placeholder="Veuillez entrer votre email" required
+              oninvalid="this.setCustomValidity('Entrer votre email ici')"
+              oninput="this.setCustomValidity('')"/>
+              <label for="message">Commentaire</label>
+              <textarea name="message" rows="10" cols="30" placeholder="Veuillez entrer votre message"required
+              oninvalid="this.setCustomValidity('Entrer votre commentaire ici')"
+              oninput="this.setCustomValidity('')"/>
+              </textarea>
+              <label for="pays">Pays</label>
+              <select id="pays" name="pays" required>
+                <option value="" selected>--Veuillez choisir un pays--</option>
+                <option value="france">France</option>
+                <option value="allemagne">Allemagne</option>
+                <option value="japon">Japon</option>
+                <option value="australie">Australie</option>
+              </select>
+              <hr class="hr-form">
+              <input class="bouton-envoyer" type="submit" value="Envoyer">
+            </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright&copy; Haj Amor Bassel</p>
+    </footer>
+  </body>
+</html>
